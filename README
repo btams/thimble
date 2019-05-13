@@ -1,0 +1,90 @@
+THIMBLE  -- Research Library for Development and Analysis of
+Fingerprint-Based Biometric Cryptosystems --  version June 2015
+
+Release date: 2015.06.01
+
+Author: Benjamin Tams, Institute for Mathematical Stochastics Georgia Augusta
+University of Goettingen (btams@math.uni-goettingen.de)
+
+THIMBLE is open-source software distributed under the terms of the
+GNU Lesser General Public License.
+See the files COPYING and COPYING.LESSER for complete details on the licensing
+of THIMBLE.
+
+
+##############################################################################
+
+
+Documentation
+------------------------------------------------------------------------------
+Run 'make doxy' which will produce the doxygen documentation of the library
+that can be viewed by opening 'doc/html/index.html' in a web-browser. 
+Building the documentation requires an installation of 'doxygen' and 
+'doxygen-latex'.
+
+The documentation is also available online:
+
+'http://www.stochastik.math.uni-goettingen.de/biometrics/thimble'
+
+
+Building
+------------------------------------------------------------------------------
+On UNIX run 'make' to build the library 'libthimble.a' and the sample binary
+'tarpSample'. To test whether the build was successful run 
+'./tarpSample fingerprint.pgm' which should output a directed reference
+point estimated from the fingerprint image 'fingerprint.pgm' which should
+be contained in THIMBLE's root folder.
+
+For further information see the documentation which also includes a 
+description on how to compile THIMBLE and the sample executable for Windows.
+
+
+Description of the files and folder structure:
+------------------------------------------------------------------------------
+
+README           this file
+
+COPYING          GNU GENERAL PUBLIC LICENSE
+
+COPYING.LESSER   GNU LESSER GENERAL PUBLIC LICENSE
+
+Makefile         GNU make file
+
+include          contains THIMBLE's include files
+
+src              contains THIMBLE's source files
+
+tarpSample.cpp   source of a sample program to estimate a fingerprint's
+                 directed reference point using the method presented in
+                 'B. Tams (2013)' and 
+                 'B. Tams, P. Mihailescu, and A. Munk (2015)'
+
+fingerprint.pgm  Example of a fingerprint image from the FVC 2000 DB2-B
+                 database scanned at a resolution of 500 dpi as an 
+                 input to the sample program 'tarpSample' of which 
+                 source code is contained in 'tarpSample.cpp'. The 
+                 fingerprint image can be downloaded from 
+                 'http://bias.csr.unibo.it/fvc2000/download.asp'
+
+doc              contains the doxygen configuration file 'doxy.conf'
+                 that is used to build THIMBLE's documentation and the
+                 folder  'doc/imgs' in which example images for the 
+                 doxygen documentation are stored.
+
+
+References:
+------------------------------------------------------------------------------
+    B. Tams (2013). Absolute Fingerprint Pre-Alignment in 
+    Minutiae-Based Cryptosystems. Proc. BIOSIG 2013,
+    ser LNI, vol. 212, pp. 75--86.
+
+    B. Tams, P. Mihailescu, and A. Munk (2015).
+    Security Considerations in Minutiae-Based Fuzzy Vaults,
+    IEEE Trans. Inf. Forensics Security, vol 10, no. 5, May 2015
+    (Preprint: http://www.stochastik.math.uni-goettingen.de/preprints/ffv.pdf)
+
+    D. Maio, D. Maltoni, R. Cappelli, J.L. Wayman, 
+    and A.K. Jain (2000). FVC2000: Fingerprint 
+    Verfication Competition. IEEE Trans. Pattern Anal. 
+    Mach. Intell. pp. 402--412.
+
